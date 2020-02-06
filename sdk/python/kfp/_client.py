@@ -519,6 +519,32 @@ class Client(object):
     """
     return self._job_api.get_job(id=job_id)
 
+  def enable_job(self, job_id):
+    """Enable a job by id.
+    Args:
+      id of job.
+    Throws:
+      Exception if job is not found.
+    """
+    self._job_api.enable_job(id=job_id)
+
+  def disable_job(self, job_id):
+    """Disable a job by id.
+    Args:
+      id of job.
+    Throws:
+      Exception if job is not found.
+    """
+    self._job_api.disable_job(id=job_id)
+
+  def delete_job(self, job_id):
+    """Delete a job by id.
+    Args:
+      id of job.
+    Throws:
+      Exception if job is not found.
+    """
+    self._job_api.delete_job(id=job_id)
 
   def get_run(self, run_id):
     """Get run details.
