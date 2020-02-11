@@ -385,7 +385,7 @@ class Client(object):
       pipeline_package_path: local path of the pipeline package(the filename should end with one of the following .tar.gz, .tgz, .zip, .yaml, .yml).
       params: a dictionary with key (string) as param name and value (string) as as param value.
       pipeline_id: the string ID of a pipeline.
-      version_id: the string ID of a pipeline version.
+      version_id: The string ID of a pipeline version.
         If both pipeline_id and version_id are specified, pipeline_id will take precendence
         This will change in a future version, so it is recommended to use version_id by itself
     Returns:
@@ -456,7 +456,6 @@ class Client(object):
         cron_schedule=kfp_server_api.models.ApiCronSchedule(
         start_time=start_time, end_time=end_time, cron=cron_expression)
       )
-
     job_body = kfp_server_api.models.ApiJob(
         enabled=enabled,
         pipeline_spec=job_config.spec,
